@@ -1,0 +1,14 @@
+server:
+  port: 8888
+
+# file system backend
+spring:
+  profiles:
+    active: native
+
+  cloud:
+    config:
+      server:
+        native:
+#          search-locations: classpath:config/, classpath:config/serviceone
+          search-locations: file:///Users/ling.guo/Projects/github/springcloud-samples/springcloud-config/src/main/resources/config/serviceone

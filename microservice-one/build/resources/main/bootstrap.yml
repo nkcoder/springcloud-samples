@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: serviceone
+
+  profiles:
+    active: dev
+
+  cloud:
+    config:
+      uri: http://localhost:8888
