@@ -7,7 +7,8 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/nkcoder/springcloud-samples
+          uri: git@github.com:nkcoder/springcloud-samples.git
           search-paths: config-repo/orderservice, config-repo/stockservice
-          username: daniel5hbs@gmail.com
-          password: xxxx
+#          uri: https://github.com/nkcoder/springcloud-samples
+#          username: daniel5hbs@gmail.com
+#          password: your-password-for-github

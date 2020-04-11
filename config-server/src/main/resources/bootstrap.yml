@@ -1,0 +1,9 @@
+encrypt:
+  key: KEY-FOR-TEST!
+
+spring:
+  cloud:
+    config:
+      server:
+        encrypt:
+          enabled: false
