@@ -8,8 +8,8 @@ plugins {
 group 'org.nkcoder'
 version '1.0'
 
-sourceCompatibility = JavaVersion.VERSION_13
-targetCompatibility = JavaVersion.VERSION_13
+sourceCompatibility = JavaVersion.VERSION_11
+targetCompatibility = JavaVersion.VERSION_11
 
 ext {
     set('springCloudVersion', "Hoxton.SR3")
