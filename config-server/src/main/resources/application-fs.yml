@@ -10,5 +10,5 @@ spring:
     config:
       server:
         native:
-          search-locations: classpath:config/orderservice
+          search-locations: classpath:config/orderservice, classpath:config/stockservice
 #          search-locations: file:///Users/ling.guo/Projects/github/springcloud-samples/config-server/src/main/resources/config/orderservice
