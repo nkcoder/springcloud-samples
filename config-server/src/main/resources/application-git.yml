@@ -10,4 +10,4 @@ spring:
           uri: https://github.com/nkcoder/springcloud-samples
           search-paths: config-repo/orderservice, config-repo/stockservice
           username: daniel5hbs@gmail.com
-          password: rR_MzHLwX2nUursPZ.K_
+          password: xxxx
