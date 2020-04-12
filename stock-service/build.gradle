@@ -1,15 +1,12 @@
 plugins {
-    id 'java'
-    id 'idea'
-    id 'org.springframework.boot' version '2.2.4.RELEASE'
+    id 'org.springframework.boot' version '2.2.6.RELEASE'
     id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+    id 'java'
 }
 
-group 'org.nkcoder'
-version '1.0'
-
-sourceCompatibility = JavaVersion.VERSION_11
-targetCompatibility = JavaVersion.VERSION_11
+group = 'org.nkcoder'
+version = '1.0'
+sourceCompatibility = '11'
 
 ext {
     set('springCloudVersion', "Hoxton.SR3")
@@ -47,4 +44,8 @@ dependencies {
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }
+}
+
+test {
+    useJUnitPlatform()
 }

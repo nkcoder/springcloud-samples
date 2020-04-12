@@ -1,9 +1,12 @@
 package org.nkcoder.cloud;
 
+import javax.annotation.PostConstruct;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component
+@Slf4j
 public class ConfigService {
 
   private final String dataSourceUrl;
@@ -16,6 +19,12 @@ public class ConfigService {
     this.dataSourceUrl = dataSourceUrl;
     this.dataSourceUserName = dataSourceUserName;
     this.dataSourcePassword = dataSourcePassword;
+  }
+
+  @PostConstruct
+  public void showConfigInfo() {
+    log.info("datasource url: {}, username: {}, password: {}", getDataSourceUrl(),
+        getDataSourceUserName(), getDataSourcePassword());
   }
 
   public String getDataSourceUrl() {

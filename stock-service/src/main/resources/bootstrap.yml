@@ -1,9 +1,9 @@
 spring:
   application:
-    name: orderservice
+    name: stockservice
 
   profiles:
-    active: prod
+    active: default
 
   cloud:
     config:
@@ -11,5 +11,3 @@ spring:
 
 encrypt:
   key: KEY-FOR-TEST!
-
-

@@ -1,12 +1,5 @@
 server:
-  port: 8080
-
-# for test http://localhost:8080/actuator/env
-management:
-  endpoints:
-    web:
-      exposure:
-        include: env
+  port: 8081
 
 eureka:
   client:
