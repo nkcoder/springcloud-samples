@@ -1,0 +1,12 @@
+spring.jpa.database: "h2"
+spring.datasource.platform:  "h2"
+spring.jpa.show-sql: "true"
+spring.database.driverClassName: "org.h2.Driver"
+spring.datasource.url: "jdbc:h2:mem:testdb"
+spring.datasource.username: "h2"
+spring.datasource.password: "password"
+spring.datasource.testWhileIdle: "true"
+spring.datasource.validationQuery: "SELECT 1"
+spring.jpa.properties.hibernate.dialect: "org.hibernate.dialect.H2Dialect"
+signing.key: "345345fsdfsf5345"
+

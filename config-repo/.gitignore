@@ -1,2 +1,5 @@
-.idea
-.gradle
+.gradle/
+.idea/
+**/target/
+.DS_Store
+target/
