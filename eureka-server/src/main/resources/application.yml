@@ -1,12 +1,15 @@
-#Default port is 8761
+# default port is 8761
 server:
   port: 8761
 
 eureka:
   client:
+    # don't register with eureka when start up because I'm the eureka service itself
     registerWithEureka: false
+    # don't cache registry locally
     fetchRegistry: false
   server:
+    # wait for services to register with eureka before advertising
     waitTimeInMsWhenSyncEmpty: 5
   serviceUrl:
     defaultZone: http://localhost:8761

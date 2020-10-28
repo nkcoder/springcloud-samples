@@ -97,8 +97,6 @@
 
   </dependencies>
 
-
-
   <build>
     <plugins>
       <!-- We use the Resources plugin to filer Dockerfile and run.sh, it inserts actual JAR filename -->
