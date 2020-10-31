@@ -10,8 +10,7 @@ public class OrganizationService {
 
   private final OrganizationRepository orgRepository;
 
-  public OrganizationService(
-      OrganizationRepository orgRepository) {
+  public OrganizationService(OrganizationRepository orgRepository) {
     this.orgRepository = orgRepository;
   }
 
@@ -23,7 +22,6 @@ public class OrganizationService {
     org.setId(UUID.randomUUID().toString());
 
     orgRepository.save(org);
-
   }
 
   public void updateOrg(Organization org) {

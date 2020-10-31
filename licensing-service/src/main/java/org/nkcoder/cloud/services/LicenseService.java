@@ -2,6 +2,7 @@ package org.nkcoder.cloud.services;
 
 import java.util.List;
 import java.util.UUID;
+import lombok.extern.slf4j.Slf4j;
 import org.nkcoder.cloud.clients.OrganizationDiscoveryClient;
 import org.nkcoder.cloud.clients.OrganizationFeignClient;
 import org.nkcoder.cloud.clients.OrganizationRestTemplateClient;
@@ -12,6 +13,7 @@ import org.nkcoder.cloud.repository.LicenseRepository;
 import org.springframework.stereotype.Service;
 
 @Service
+@Slf4j
 public class LicenseService {
 
   private final LicenseRepository licenseRepository;
@@ -38,19 +40,19 @@ public class LicenseService {
 
 
   private Organization retrieveOrgInfo(String organizationId, String clientType) {
-    Organization organization = null;
+    Organization organization;
 
     switch (clientType) {
       case "feign":
-        System.out.println("I am using the feign client");
+        log.info("I am using the feign client");
         organization = organizationFeignClient.getOrganization(organizationId);
         break;
       case "rest":
-        System.out.println("I am using the rest client");
+        log.info("I am using the rest client");
         organization = organizationRestClient.getOrganization(organizationId);
         break;
       case "discovery":
-        System.out.println("I am using the discovery client");
+        log.info("I am using the discovery client");
         organization = organizationDiscoveryClient.getOrganization(organizationId);
         break;
       default:

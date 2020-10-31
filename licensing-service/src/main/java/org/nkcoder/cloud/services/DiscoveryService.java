@@ -20,17 +20,16 @@ public class DiscoveryService {
     this.discoveryClient = discoveryClient;
   }
 
-  public List getEurekaServices() {
+  public List<String> getEurekaServices() {
     List<String> services = new ArrayList<>();
 
-    discoveryClient.getServices().forEach(serviceName -> {
-      discoveryClient.getInstances(serviceName).forEach(instance -> {
-        services.add(String.format("%s:%s", serviceName, instance.getUri()));
-      });
-    });
+    discoveryClient.getServices().forEach(serviceName ->
+      discoveryClient.getInstances(serviceName).forEach(instance ->
+        services.add(String.format("%s:%s", serviceName, instance.getUri()))
+      )
+    );
 
     return services;
   }
-
 
 }
