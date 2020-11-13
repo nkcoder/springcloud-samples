@@ -14,7 +14,7 @@ eureka:
     number-of-replication-retries: 0
     # wait for services to register with eureka before advertising
     wait-time-in-ms-when-sync-empty: 1
-    response-cache-update-interval-ms: 0
+    response-cache-update-interval-ms: 1
     response-cache-auto-expiration-in-seconds: 10
   serviceUrl:
     defaultZone: http://localhost:8761
