@@ -5,12 +5,17 @@ server:
 eureka:
   client:
     # don't register with eureka when start up because I'm the eureka service itself
-    registerWithEureka: false
     # don't cache registry locally
-    fetchRegistry: false
+    register-with-eureka: false
+    fetch-registry: false
   server:
+    # just for local dev
+    enable-self-preservation: false
+    number-of-replication-retries: 0
     # wait for services to register with eureka before advertising
-    waitTimeInMsWhenSyncEmpty: 5
+    wait-time-in-ms-when-sync-empty: 0
+    response-cache-update-interval-ms: 0
+    response-cache-auto-expiration-in-seconds: 10
   serviceUrl:
     defaultZone: http://localhost:8761
   
