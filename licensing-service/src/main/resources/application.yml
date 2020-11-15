@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: 8081
 
 # for test http://localhost:8080/actuator/env
 management:
@@ -9,10 +9,30 @@ management:
         include: env
 
 eureka:
+  instance:
+    prefer-ip-address: true
   client:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: http://localhost:8761/eureka
-  instance:
-    prefer-ip-address: true
+      default-zone: http://localhost:8761/eureka/
+
+#    prefer-ip-address: true
+
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: none
+  h2:
+    console:
+      enabled: true
+      path: /h2
+      settings:
+        trace: true

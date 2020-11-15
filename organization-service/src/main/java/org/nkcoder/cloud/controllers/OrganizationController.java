@@ -15,11 +15,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/v1/organizations")
-public class OrganizationServiceController {
+public class OrganizationController {
 
   private final OrganizationService orgService;
 
-  public OrganizationServiceController(
+  public OrganizationController(
       OrganizationService orgService) {
     this.orgService = orgService;
   }

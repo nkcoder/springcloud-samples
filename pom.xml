@@ -22,7 +22,6 @@
     <module>config-server</module>
     <module>config-repo</module>
     <module>licensing-service</module>
-    <module>service-discovery-server</module>
     <module>organization-service</module>
     <module>eureka-server</module>
   </modules>
